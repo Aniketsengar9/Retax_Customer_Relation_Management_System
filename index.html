@@ -14,7 +14,7 @@
               <h1 id="logo">Retax</h1>
               <input type="text" name="search" id="search" placeholder="Search" />
       
-              <div class="link-div">
+              <div  class="link-div">
                 <img class="nav-icon" src="/images/dashboard.png" alt="pic" />
                 <a class="links" id="dashboard" href="#">Dashboard</a>
               </div>
@@ -29,9 +29,9 @@
                 <a class="links" id="calender" href="#">Calender</a>
               </div>
       
-              <div class="link-div">
+              <div id="emp-div" class="link-div">
                 <img class="nav-icon" src="/images/employees.png" alt="pic" />
-                <a class="links" id="employees" href="#">Employees</a>
+                <a class="links" id="employees" href="">Employees</a>
               </div>
       
               <div class="link-div">
@@ -71,6 +71,7 @@
                   <a class="links" id="logout" href="#">Logout</a>
                 </div>
                 <br>
+                <br>
               </div>
             </div>
           </nav>
@@ -80,13 +81,19 @@
           <!-- Dashboard and data div-->
 
           <div id="dashboard">
-            <div id="profile">
+            
+              <div id="profile">
                 <span class="profile-span">
                     <img class="notification" src="/images/notification.png" alt="">
                 <img class="profile-img" src="/images/dummy-profile.png" alt="profile">
                 </span>
             </div>
             <hr>
+
+            <!--Main content div start-->
+
+            <div id="dashboard-page">
+
             <div id="button-div">
                 <h1>Dashboard</h1>
                 <button id="add-Employee">Add an Employee</button>
@@ -124,10 +131,57 @@
                     <h2>Performance</h2>
                 </div>
             </div>
+            </div>
              
+            <div id="employees-page">
+              <div id="button-div">
+                <h1>Employee</h1>
+                <button id="add-Employee">Add an Employee</button>
+            </div>
+            <div id="filterbar">
+              <input type="text" name="emp" id="search_emp" placeholder="Search by Name">
+              <select name="" id="salary">
+                  <option value="">Select Salary Range</option>
+                  <option value="25000">less 25000</option>
+                  <option value="25000+">25000 - 50000</option>
+                  <option value="50000+">50000 - 100000</option>
+                  <option value="100000+">100000+</option>
+              </select>
+              <select name="" id="dept">
+                  <option value="">Department</option>
+                  <option value="engineering">Engineering</option>
+                  <option value="finance">Finance</option>
+                  <option value="operations">Operations</option>
+                  <option value="marketing">Marketing</option>
+              </select>
+          </div>
+          <br>
+          <table CELLSPACING=0>
+            <thead>
+                <td></td>
+                <td>NAME</td>
+                <td>POSITION</td>
+                <td>DEPARTMENT</td>
+                <td>STATUS</td>
+                <td>PHONE NUMBER</td>
+                <td>EMAIL</td>
+                <td></td>
+            </thead>
+            <tbody>
+                <!-- append here all the data -->
+            </tbody>
+        </table>
+        <div id="pagination">
+          
+        </div>
+              
+
+
+            </div>
+
           </div>
           
     </div>
-
+    <script src="/script/index.js"></script>
   </body>
 </html>
