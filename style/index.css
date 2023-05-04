@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900;1000&display=swap');
+body{
+    overflow-y: hidden ;
+    font-family: "Mulish";
+}
+.container{
+    display: flex;
+    
+}
+
+/* Nav bar CSS */
+#navbar{
+   
+    width: 15%;
+    height: 100%;
+    background-color: #f4f4f6; 
+}
+
+.nav-child{
+    margin-left: 10%;
+}
+
+#search{
+    border-radius: 5px;
+    text-decoration: none;
+    border: 1px solid #ccc;
+    padding: 8px;
+    font-size: 15px;
+    margin: 10px;
+    
+}
+.link-div{
+    margin: 15px;
+   
+}
+.link-div:hover .nav-icon{
+   transform: scale(1.5);
+}
+
+.nav-icon{
+    width: 15px;
+}
+
+.links{
+    color: #262626;
+    text-decoration: none;
+    font-size: 20px;
+    margin: 10px;
+    font-weight: bold;
+}
+.links:hover{
+    color: #722ed1;
+}
+/*
+.my-links:active{
+    color: red;
+}
+*/
+
+
+.bottom-nav{
+    margin-top: 90%;
+}
+
+/* left div*/
+#dashboard{
+    margin: 2%;
+    width: 80%;
+}
+#button-div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#add-Employee{
+    border-color: #722ed1;
+    border: 2px solid;
+    border-radius: 10px;
+    font-size: 20px;
+    height: 40px;
+    color: #722ed1;
+    background-color: white;
+    
+
+}
+
+#key-indicators{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 3%;
+    margin: 2%;
+}
+
+#graph-section{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+#successful-case{
+    font-weight: bold;
+    background-color: #f9f0ff;
+    padding-left: 30px;
+    text-align: start;
+    border-radius: 5px;
+}
+
+#leads{
+    font-weight: bold;
+    background-color: #fff2e8;
+    padding-left: 30px;
+    text-align: start;
+    border-radius: 5px;
+}
+
+#request{
+    font-weight: bold;
+    background-color: #f6ffed;
+    padding-left: 30px;
+    text-align: start;
+    border-radius: 5px;
+}
+
+#new-customer{
+    font-weight: bold;
+    background-color: #e6f7ff;
+    padding-left: 30px;
+    text-align: start;
+    border-radius: 5px;
+}

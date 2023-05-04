@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900;1000&display=swap');
+body{
+    overflow-y: hidden ;
+    font-family: "Mulish";
+}
+
+.container{
+    display: flex;
+}
+
+/* Nav bar CSS */
+#navbar{
+   
+    width: 15%;
+    height: 100%;
+    background-color: #f4f4f6; 
+}
+
+.nav-child{
+    margin-left: 10%;
+}
+#search{
+    border-radius: 5px;
+    text-decoration: none;
+    border: 1px solid #ccc;
+    padding: 8px;
+    font-size: 15px;
+    margin: 10px;
+    
+}
+.link-div{
+    margin: 15px;
+   
+}
+.link-div:hover .nav-icon{
+   transform: scale(1.5);
+}
+
+.nav-icon{
+    width: 15px;
+}
+.links{
+    color: #262626;
+    text-decoration: none;
+    font-size: 20px;
+    margin: 10px;
+    font-weight: bold;
+}
+.links:hover{
+    color: #722ed1;
+}
+/*
+.my-links:active{
+    color: red;
+}
+*/
+
+
+.bottom-nav{
+    margin-top: 90%;
+}
+#container-2{
+    /* border: 2px solid red; */
+    width: 90%;
+}
+
+#heading-div{
+    
+    border: 1px solid rgb(225, 222, 222);
+    background-color: #fdfcfc;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    height: 70px;
+    width: 99%;
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    padding-left: 20px;
+    /* margin-left: 30px; */
+}
+#customers-div{
+    display: flex;
+}
+#customer-profile{
+    border: 2px solid rgb(236, 234, 234) ;
+    width: 400px;
+    background-color: white;
+}
+#customer-name{
+   
+    border: 1px solid rgb(245, 243, 243);
+    background-color: gray;
+}
+#detailes{
+    display: flex;
+    width: 400px;
+    justify-content: space-around;
+    color: white;
+}
+#name{
+    padding-left: 40px;
+    color: white;
+}
+#partner-div{
+    background-color: white;
+    
+}
+p{
+    color: rgb(194, 191, 191);
+    font-size: 20px;
+}
+#partner-div{
+    
+    display: flex;
+    justify-content: space-around;
+}
+#Details{
+    display: flex;
+    
+}
+button{
+    margin-top: 40px;
+    width: 70px;
+    height: 30px;
+}
+#details-div{
+    background-color: white;
+}
+#table-div{
+    /* border: 2px solid red; */
+    width: 95%;
+}
+#link-div{
+    border: 1px solid rgb(222, 218, 218);
+}
+
+#links{
+    
+    width: 70%;
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+a{
+    text-decoration: none;
+    font-size: 20px;
+    color: rgb(164, 162, 162);
+}
