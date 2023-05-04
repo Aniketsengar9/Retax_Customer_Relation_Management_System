@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900;1000&display=swap');
 body{
-    overflow-y: hidden ;
+  /*  overflow-y: hidden ; */
     font-family: "Mulish";
 }
 .container{
@@ -58,7 +58,7 @@ body{
 
 
 .bottom-nav{
-    margin-top: 90%;
+    margin-top: 75%;
 }
 
 /* left div*/
@@ -140,6 +140,108 @@ body{
     text-align: start;
     border-radius: 5px;
 }
+
+
+
+/* Employee-Page CSS*/
+
+.active-status{
+    color: #52c41a;
+    background-color: #f6ffed;
+    
+}
+
+
+
+ /*#search_emp:focus {
+    outline: none;
+}*/
+
+#search_emp {
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 8px;
+    text-align: center;
+    color: black;
+    border: 1px solid #ccc;
+}
+
+
+
+select {
+    padding: 8px;
+    font-size: 16px;
+    background-color: #f4f4f6;
+    color: black;
+    border: 1px solid gray;
+    border-radius: 8px;
+}
+
+select:focus {
+    outline: none;
+}
+
+#employees-page{
+    display: none;
+}
+table td:first-child {
+    width: 50px; /* Set the desired width for the first (image) column */
+}
+table {
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    
+    
+    /* border-collapse: collapse; */
+}
+
+thead {
+    background-color: #f4f4f6;
+    color: black;
+}
+td ,th{
+    border-bottom: 1px solid #ddd;
+}
+td {
+    padding: 15px; 
+    margin: 0px;
+}
+
+tbody {
+    background-color: white;
+    color: black;
+}
+
+#pagination-wrapper {
+    display: flex;
+    margin-top: 20px;
+    column-gap: 20px;
+    justify-content: center;
+}
+
+#pagination-wrapper button:hover {
+    background-color: white;
+}
+
+#pagination-wrapper button:focus {
+    background-color: #fff;
+    color: black;
+}
+
+#pagination-wrapper button {
+    width: 40px;
+    height: 40px;
+    background-color: rgb(255, 255, 255);
+    color: white;
+    font-size: 22px;
+    border: none;
+    border-radius: 10px;
+    margin-right: 5px;
+}
+
+
+
 
 
    
