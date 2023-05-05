@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900;1000&display=swap');
 body{
-  /*  overflow-y: hidden ; */
+    overflow-y: hidden ; 
     font-family: "Mulish";
 }
 .container{
@@ -75,7 +75,7 @@ body{
     
 }
 
-#dashboard{
+#dashboard-div{
     margin: 2%;
     width: 80%;
 }
@@ -84,7 +84,7 @@ body{
     justify-content: space-between;
     align-items: center;
 }
-#add-Employee{
+#add-Employee-emp{
     border-color: #722ed1;
     border: 2px solid;
     border-radius: 10px;
@@ -92,8 +92,15 @@ body{
     height: 40px;
     color: #722ed1;
     background-color: white;
-    
-
+}
+#add-Employee-dashboard{
+    border-color: #722ed1;
+    border: 2px solid;
+    border-radius: 10px;
+    font-size: 20px;
+    height: 40px;
+    color: #722ed1;
+    background-color: white;
 }
 
 #key-indicators{
@@ -241,7 +248,11 @@ tbody {
 }
 
 
+/* Form of employee */
 
+#add-Employee-form{
+    display: none;
+}
 
 
    

@@ -80,7 +80,7 @@
 
           <!-- Dashboard and data div-->
 
-          <div id="dashboard">
+          <div id="dashboard-div">
             
               <div id="profile">
                 <span class="profile-span">
@@ -96,7 +96,7 @@
 
             <div id="button-div">
                 <h1>Dashboard</h1>
-                <button id="add-Employee">Add an Employee</button>
+                <button  id="add-Employee-dashboard">Add an Employee</button>
             </div>
             <hr>
             <h2>Key indicators</h2>
@@ -136,7 +136,7 @@
             <div id="employees-page">
               <div id="button-div">
                 <h1>Employee</h1>
-                <button id="add-Employee">Add an Employee</button>
+                <button  id="add-Employee-emp">Add an Employee</button>
             </div>
             <div id="filterbar">
               <input type="text" name="emp" id="search_emp" placeholder="Search by Name">
@@ -148,8 +148,9 @@
                   <option value="100000+">100000+</option>
               </select>
               <select name="" id="dept">
+                <option value="">Select Department</option>
                   <option value="">Department</option>
-                  <option value="engineering">Engineering</option>
+                  <option value="sales">Sales</option>
                   <option value="finance">Finance</option>
                   <option value="operations">Operations</option>
                   <option value="marketing">Marketing</option>
@@ -172,16 +173,56 @@
             </tbody>
         </table>
         <div id="pagination">
-          
+
         </div>
               
 
 
             </div>
 
+            <div id="task-page">
+              <!--Please append all task data here ... -->
+            </div>
+            <div id="calender-page">
+              <!--Please append all Calender data here ... -->
+            </div>
+
+            <div id="customers-page">
+              <!--Please append all Customers data here ... -->
+            </div>
+
+            <div id="leads-page">
+              <!--Please append all Leads data here ... -->
+            </div>
+
+            <div id="cases-page">
+              <!--Please append all Cases data here ... -->
+            </div>
+
+            <div id="add-Employee-form">
+              <h1>Add Employee</h1>
+              
+                <label>Department : </label><input type="text" id="emp_dept"><br>
+                <label>Name : </label><input type="text" id="emp_name"><br>
+                <label>Email : </label><input type="email" id="emp_email"><br>
+                <label>Location : </label><input type="text" id="emp_location"><br>
+                <label>Phone : </label><input type="number" id="emp_phone"><br>
+                <label>Location : </label><input type="text" id="emp_location"><br>
+                <label>Start Date : </label><input type="date" id="emp_start_date"><br>
+                <label>Postion : </label><input type="text" id="emp_position"><br>
+                <label>Profile-Pic : </label><input type="text" id="emp_profile"><br>
+                <label>Status : </label><input type="text" id="emp_status"><br>
+                <button id="emp_submit">Submit</button>
+                <button id="emp_cancel">Cancel</button>
+              </form>
+            </div>
+
+
+
           </div>
           
     </div>
     <script src="/script/index.js"></script>
+    <script src="/script/employee.js"></script>
   </body>
 </html>
