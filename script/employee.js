@@ -1,50 +1,21 @@
-//All div-pages
-let employee_page = document.getElementById("employees-page");
-let calender_page = document.getElementById("calender-page");
-let customer_page = document.getElementById("customers-page");
-let leads_page = document.getElementById("leads-page");
-let case_page = document.getElementById("cases-page");
-let task_page = document.getElementById("task-page");
-let add_emp_form = document.getElementById("add-Employee-form");
-
-// All link tags of nav bar
-let task = document.getElementById("task");
-let calender = document.getElementById("calender");
-let employee = document.getElementById("employees");
-let customers = document.getElementById("customers");
-let cases = document.getElementById("cases");
-let lead = document.getElementById("lead");
-
-let setting = document.getElementById("setting");
-let help = document.getElementById("help");
-let logout = document.getElementById("logout");
-
-// Emoloyees page add display function
-
-employee.addEventListener("click", (event) => {
-  event.preventDefault();
-  dashboard_page.style.display = "none";
-  employee_page.style.display = "inline";
-  calender_page.style.display = "none";
-  task_page.style.display = "none";
-  customer_page.style.display = "none";
-  leads_page.style.display = "none";
-  case_page.style.display = "none";
-  add_emp_form.style.display = "none";
-  fetchData();
-});
 
 // Fetch data from employee API
-let currentPage = 1;
-let rowsPerPage = 8;
 let tbody = document.querySelector("tbody");
+
 let employee_url = new URL(
   "https://64528a67a2860c9ed40f2135.mockapi.io/employees"
 );
 
+let currentPage = 1;
+let rowsPerPage = 5;
 let data;
 let total;
-async function fetchData() {
+
+// let employee_url = "https://64528a67a2860c9ed40f2135.mockapi.io/employees"
+
+fetchData()
+
+ function fetchData() {
   fetch(employee_url)
     .then(function (res) {
       return res.json();
@@ -58,9 +29,9 @@ async function fetchData() {
     });
 }
 
-// Append data in the t body by fetch request
+// Append data in the tbody by fetch request
 
-async function display(data) {
+ function display(data) {
   total = data.length;
   paginationFunction(total);
   let startIndex = (currentPage - 1) * rowsPerPage;
@@ -69,6 +40,7 @@ async function display(data) {
 
   tbody.innerHTML = "";
   for (let i = 0; i < paginatedData.length; i++) {
+
     let tr = document.createElement("tr");
     let img = document.createElement("img");
     let name = document.createElement("td");
@@ -82,7 +54,8 @@ async function display(data) {
     img.src = paginatedData[i].profile_pic;
     img.style.borderRadius = "50%";
     img.style.marginTop = "6%";
-    img.style.inlineSize = "65%";
+    img.style.inlineSize = "10%";
+    img.style.width = "50px";
     name.innerText = paginatedData[i].ename;
     posi.innerText = paginatedData[i].position;
     dept.innerText = paginatedData[i].dept;
@@ -113,7 +86,7 @@ async function paginationFunction(total) {
     for (let i = 1; i <= totalPages; i++) {
       let btn = document.createElement("button");
       btn.innerHTML = i;
-      btn.style.color = "red";
+      // btn.style.color = "red";
       btn.setAttribute("data-id", i);
 
       //add event listner

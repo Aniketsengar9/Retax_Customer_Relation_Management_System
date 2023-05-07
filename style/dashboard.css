@@ -12,34 +12,38 @@ body {
 }
 
 /* Nav bar CSS */
-
-/* new changes */
 #navbar {
     position: sticky;
     /* Make the navbar fixed */
     left: 0;
     top: 0;
-    /* border: 2px solid black; */
-    width: 15%;
+    width: 14%;
     min-height: 100vh;
     background-color: #f4f4f6;
     overflow-y: auto;
     /* Add vertical scroll if needed */
 }
 
-
+.nav-child h1 {
+    margin: 10px;
+    margin-left: 10%;
+}
+#filterbar{
+    margin: 10px;
+    margin-left: 2.5%;
+}
 #search {
     border-radius: 5px;
     text-decoration: none;
     border: 1px solid #ccc;
     padding: 8px;
     font-size: 15px;
-    /* margin: 20px; */
+    margin: 20px;
     margin-left: 10%;
 }
 
 .link-div {
-    margin: 20px;
+    margin: 15px;
     margin-left: 10%;
 }
 
@@ -71,13 +75,11 @@ body {
     /* Add some padding at the bottom */
 }
 
-/* ends here */
-
-
-
 /* left div*/
+
 .profile-span {
-    margin-left: 90%;
+    margin-top: 0.5%;
+    margin-left: 92%;
 }
 
 .notification {
@@ -91,12 +93,23 @@ body {
 
 }
 
+/* #dashboard-div h1 {
+    margin: 20px;
+    margin-left: 2%;
+} */
+
+
 #dashboard-div {
-    margin: 2%;
-    width: 80%;
+    width: 85.8%;
+    min-height: 100vh;
+    position: fixed;
+    left: 14%;
 }
 
 #button-div {
+    /* border: 2px solid black; */
+    width: 95%;
+    margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -211,17 +224,15 @@ select:focus {
     display: none;
 }
 
-table td:first-child {
+/* table td:first-child {
     width: 50px;
     /* Set the desired width for the first (image) column */
-}
+/* }  */
 
 table {
     text-align: center;
     margin: auto;
-    width: 100%;
-
-
+    width: 98%;
     /* border-collapse: collapse; */
 }
 
@@ -238,6 +249,7 @@ th {
 td {
     padding: 15px;
     margin: 0px;
+    line-height: 2;
 }
 
 tbody {
