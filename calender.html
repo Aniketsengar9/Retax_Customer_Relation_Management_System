@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/Calender.css" />
+  </head>
+  <body>
+    <div class="container">
+        <nav id="navbar">
+            <div class="nav-child">
+              <h1 id="logo">Retax</h1>
+              <input type="text" name="search" id="search" placeholder="Search" />
+      
+              <div class="link-div">
+                <img class="nav-icon" src="/images/dashboard.png" alt="pic" />
+                <a class="links" id="dashboard" href="./index.html">Dashboard</a>
+              </div>
+      
+              <div class="link-div">
+                <img class="nav-icon" src="/images/task.png" alt="pic" />
+                <a class="links" id="task" href="#">Task</a>
+              </div>
+      
+              <div class="link-div">
+                <img class="nav-icon" src="/images/calendar.png" alt="pic" />
+                <a class="links" id="calender" href="#">Calender</a>
+              </div>
+      
+              <div class="link-div">
+                <img class="nav-icon" src="/images/employees.png" alt="pic" />
+                <a class="links" id="employees" href="#">Employees</a>
+              </div>
+      
+              <div class="link-div">
+                <img class="nav-icon" src="/images/customer.png" alt="pic" />
+                <a class="links" id="customers" href="#">Customers</a>
+              </div>
+      
+              <div class="link-div">
+                <img class="nav-icon" src="/images/cases.png" alt="pic" />
+                <a class="links" id="cases" href="#">Cases</a>
+              </div>
+      
+              <div class="link-div">
+                <img class="nav-icon" src="/images/leads.png" alt="pic" />
+                <a class="links my-link" id="lead" href="./leads.html">Leads</a>
+              </div>
+      
+              <!--Setting logout -->
+              
+              <div class="bottom-nav">
+                  <hr />
+                  <br>
+                <div class="link-div">
+                  <img class="nav-icon" src="/images/setting.png" alt="pic" />
+                  <a class="links" id="setting" href="google.com">Setting</a>
+                </div>
+      
+                <div class="link-div">
+                  <img class="nav-icon" src="/images/help.png" alt="pic" />
+                  <a class="links" id="help" href="#">Help</a>
+                </div>
+                <br>
+                <hr />
+                <br>
+                <div class="link-div">
+                  <img class="nav-icon" src="/images/logout.png" alt="pic" />
+                  <a class="links" id="logout" href="#">Logout</a>
+                </div>
+                <br>
+              </div>
+            </div>
+          </nav>
+
+
+
+          <!-- Dashboard and data div-->
+
+          <div id="dashboardCalender">
+            <div id="button-div">
+                <h1>Calender</h1>
+                <button id="add-a-task">Add a task</button>
+            </div>
+            <hr>
+            <!-- <hr>
+            <h2>Key indicators</h2>
+            <div id="key-indicators">
+                
+                <div id="successful-case">
+                    <p>Successful-Case</p>
+                    <h1 id="successful-case-data">145</h1>
+                </div>
+                <div id="leads">
+                    <p>Leads</p>
+                    <h1 id="leads-data">215</h1>
+                </div>
+                <div id="request">
+                    <p>Request</p>
+                    <h1 id="request-data">345</h1>
+                </div>
+                <div id="new-customer">
+                    <p>New Customer</p>
+                    <h1 id="new-customer-data">458</h1>
+                </div>
+            </div>
+
+            <hr>
+
+            <br>
+            <div id="graph-section">
+                <div id="graph">
+                    <h2>Case</h2>
+                </div>
+                <div id="percentage">
+                    <h2>Performance</h2>
+                </div>
+            </div> -->
+
+
+                    <!-- Navbar for Calender -->
+
+
+            <div id="short-nav">
+                <div id="short-nav-left">
+                    <div>
+                      <input type="text" placeholder="Search" id="searching"/>
+                    </div>
+                    <div>
+                       <button class="buttons">Assignee</button>
+                    </div>
+                    <div>
+                       <button class="buttons">Task</button>
+                    </div>
+                    <div>
+                        <button class="buttons">Status</button>
+                    </div>
+                </div>
+                   <div id="short-nav-right">
+                      <div><</div>
+                      <div>></div>
+                      <div>June 2023</div>  
+                      <div>
+                         <input type="date" placeholder="Months" id="months"/>
+                      </div>
+                   
+                    </div>
+             </div>
+             <hr>
+
+             <!-- Calender body Start here -->
+
+                <div id="calenderbody">
+                     <div>
+                      <div class="num">
+                         <div><b>3</b></div>
+                         Sun
+                      </div>
+                     </div>
+                     <div>
+                      <div class="num">
+                          <div>
+                             <b>4</b>
+                          </div>
+                          Mon
+                      </div>
+                     </div>
+                     <div>
+                      <div class="num">
+                           <div><b>5</b></div>
+                           Tue
+                      </div>
+                     </div>
+                     <div>
+                      <div class="num">
+                         <div id="col"><b>6</b></div>
+                         Wed
+                      </div>
+                     </div>
+                     <div>
+                      <div class="num">
+                          <div><b>7</b></div>
+                          Thu
+                      </div>
+                     </div>
+                </div>
+
+                                   <!-- Calender boxes with color -->
+
+                <div id="calmain">
+                      <div class="col">
+                          <div id="cone">Send leads document<br>for inspection</div><hr>
+                          <div id="ctwo">Update documents<br>in customer profile</div><hr>
+                          <div id="cthree">Call to customer</div><hr>
+                      </div>
+                      <div class="col">
+                        <div id="coone">Call to customer</div><hr>
+                          <div id="cotwo">Update documents<br>in customer profile</div><hr>
+                          <div id="cothree">Send leads document<br>for inspection</div><hr>
+                      </div>
+                      <div class="col">
+                        <div id="colone">Send leads document<br>for inspection</div><hr>
+                          <div id="coltwo">Call to customer</div><hr>
+                          <div id="colthree">Update documents<br>in customer profile</div><hr>
+                      </div>
+                      <div class="col">
+                        <div id="coluone">Update documents<br>in customer profile</div><hr>
+                          <div id="colutwo">Send leads document<br>for inspection</div><hr>
+                          <div id="coluthree">Call to customer</div><hr>
+                      </div>
+                      <div class="col">
+                        <div id="columone">Update documents<br>in customer profile</div><hr>
+                          <div id="columtwo">Call to customer</div><hr>
+                          <div id="columthree">Send leads document<br>for inspection</div><hr>
+                      </div>
+                      <div id="collast">
+                          <div>09:00</div>
+                          <div>10:00</div>
+                          <div>11:00</div>
+                          <div>12:00</div>
+                          <div>13:00</div>
+                          <div>14:00</div>
+                          <div>15:00</div>
+                          <div>16:00</div>
+                          <div>17:00</div>
+                          <div>18:00</div>
+                      </div>
+                </div>
+          
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,352 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900;1000&display=swap');
+body{
+    overflow-y: hidden ;
+    font-family: "Mulish";
+}
+.container{
+    display: flex;
+}
+
+/* Nav bar CSS */
+#navbar{
+   
+    width: 15%;
+    height: 100%;
+    background-color: #f4f4f6; 
+}
+
+.nav-child{
+    margin-left: 10%;
+}
+
+#search{
+    border-radius: 5px;
+    text-decoration: none;
+    border: 1px solid #ccc;
+    padding: 8px;
+    font-size: 15px;
+    margin: 10px;
+    margin-left: -10px;
+    
+}
+.link-div{
+    margin: 15px;
+   
+}
+.link-div:hover .nav-icon{
+   transform: scale(1.5);
+}
+
+.nav-icon{
+    width: 15px;
+}
+
+.links{
+    color: #262626;
+    text-decoration: none;
+    font-size: 20px;
+    margin: 10px;
+    font-weight: bold;
+}
+.links:hover{
+    color: #722ed1;
+}
+/*
+.my-links:active{
+    color: red;
+}
+*/
+
+
+.bottom-nav{
+    margin-top: 90%;
+}
+
+/* left div*/
+#dashboardCalender{
+    margin: 2%;
+    width: 80%;
+    margin-top: 2px;
+}
+#button-div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#add-a-task{
+    border-color: #722ed1;
+    border: 2px solid;
+    border-radius: 10px;
+    font-size: 20px;
+    height: 40px;
+    color: #722ed1;
+    background-color: white;
+
+}
+
+/* #key-indicators{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 3%;
+    margin: 2%;
+}
+
+#graph-section{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+#successful-case{
+    font-weight: bold;
+    background-color: #f9f0ff;
+    padding-left: 30px;
+    text-align: start;
+    border-radius: 5px;
+}
+
+#leads{
+    font-weight: bold;
+    background-color: #fff2e8;
+    padding-left: 30px;
+    text-align: start;
+    border-radius: 5px;
+}
+
+#request{
+    font-weight: bold;
+    background-color: #f6ffed;
+    padding-left: 30px;
+    text-align: start;
+    border-radius: 5px;
+}
+
+#new-customer{
+    font-weight: bold;
+    background-color: #e6f7ff;
+    padding-left: 30px;
+    text-align: start;
+    border-radius: 5px;
+} */
+                
+
+                    /* Navbar for Calender  */
+                                     
+
+   #short-nav{
+       /* border: 2px solid red; */
+     height: 50px;
+      display: flex;
+   }
+   #short-nav-left{
+       /* border: 2px solid red; */
+       display: flex;
+       width: 600px;
+       justify-content: space-around;
+   }
+    #searching{
+       width: 300px;
+   }
+   #short-nav-left > .buttons{
+        /* border: 2px solid red; */
+        height: 25px;
+   }
+   .buttons{
+    border-color:#ccc;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+    height: 25px;
+    color: black;
+    background-color: white;
+   }
+
+   #short-nav-right{
+       /* border: 2px solid blue; */
+       width: 300px;
+       margin-left: 300px;
+       display: flex;
+       justify-content: space-between;
+   }
+   /* #short-nav-right > div{
+    border: 2px solid #722ed1;
+    
+   } */
+   #months{
+    border: 2px solid #ccc;
+    height: 22px;
+    border-radius: 3px;
+
+   }
+
+                       /* Calender body Start here  */         
+
+   #calenderbody{
+      border: 1px solid #ccc;
+      height: 60px;
+      width: 100%;
+      display: flex;
+   }
+   #calenderbody > div{
+     border: 1px solid #ccc;
+     width: 200px;
+   }
+   .num{
+     /* border: 2px solid red; */
+       height: 40px;
+       width: 25px;
+       margin-top: 5px;
+       margin-left: 80px;
+    }
+    .num > div{
+        border: 1px solid #ccc;
+        text-align: center;
+        border-radius: 10px;
+        background-color: #f4f4f6;
+    }
+    .num > #col{
+        background-color: #722ed1;
+    }
+
+                  /* Calender boxes with color */
+
+
+    #calmain{
+        border: 1px solid #ccc;
+        width: 100%;
+        margin-top: 1px;
+        height: 500px;
+        display: flex;
+    }
+    #calmain > .col{
+          border: 1px solid #ccc;
+          margin-left: 10px;
+          width: 200px;
+    }
+    .col > #cone{
+          border: 2px solid #F9A825;
+          height: 100px;
+          margin-top: 10px;
+          background-color: #F9A825;
+          font-size:x-small;
+    }
+
+     .col > #ctwo{
+        border: 2px solid #C6FF00;
+        height: 100px;
+        margin-top: 50px;
+        background-color: #C6FF00;
+        font-size:x-small;
+     }
+     .col > #cthree{
+        border: 2px solid #B39DDB;
+        height: 100px;
+        margin-top: 65px;
+        background-color: #B39DDB;
+        font-size:x-small;
+     }
+     .col > #coone{
+        background-color: #B39DDB;
+        border: 2px solid #B39DDB ;
+        height: 100px;
+        margin-top: 10px;
+        font-size:x-small;
+        
+  }
+  .col > #cotwo{
+    border: 2px solid #90A4AE;
+    height: 100px;
+    margin-top: 70px;
+    background-color: #90A4AE;
+    font-size:x-small;
+  }
+  .col > #cothree{
+    border: 2px solid #C6FF00;
+    height: 100px;
+    margin-top: 70px;
+    background-color: #C6FF00;
+    font-size:x-small;
+ }
+
+ .col > #colone{
+    background-color: #C6FF00;
+    border: 2px solid #C6FF00 ;
+    height: 100px;
+    margin-top: 10px;
+    font-size:x-small;
+    
+}
+.col > #coltwo{
+border: 2px solid #B39DDB;
+height: 60px;
+margin-top: 30px;
+background-color: #B39DDB;
+font-size:x-small;
+}
+.col > #colthree{
+border: 2px solid #722ed1;
+height: 130px;
+margin-top: 50px;
+background-color: #722ed1;
+font-size:x-small;
+}
+
+.col > #coluone{
+    background-color: #B39DDB;
+    border: 2px solid #B39DDB ;
+    height: 100px;
+    margin-top: 10px;
+    font-size:x-small;
+    
+}
+.col > #colutwo{
+border: 2px solid #90A4AE;
+height: 80px;
+margin-top: 50px;
+background-color: #90A4AE;
+font-size:x-small;
+}
+.col > #coluthree{
+border: 2px solid #B39DDB;
+height: 130px;
+margin-top: 80px;
+background-color: #B39DDB;
+font-size:x-small;
+}
+
+.col > #columone{
+    background-color: #F9A825;
+    border: 2px solid #F9A825 ;
+    height: 100px;
+    margin-top: 10px;
+    font-size:x-small;
+    
+}
+.col > #columtwo{
+border: 2px solid #722ed1;
+height: 40px;
+margin-top: 30px;
+background-color: #722ed1;
+font-size:x-small;
+}
+.col > #columthree{
+border: 2px solid #C6FF00;
+height: 150px;
+margin-top: 80px;
+background-color: #C6FF00;
+font-size:x-small;
+}
+
+#collast{
+     /* border: 2px solid red; */
+     width: 115px;
+}
+#collast > div{
+     border: 1px solid #ccc;
+     color: #90A4AE;
+     height: 50px;
+}
+
+
+    
+
