@@ -32,13 +32,13 @@ signinBtn.addEventListener("click", function (e) {
             // Close the Popup dialog when the user clicks on the close button
             span.addEventListener("click", function () {
                 model.style.display = "none";
-                window.location.href = "main.html";
+                window.location.href = "dashboard.html";
             });
             // Close the Popup  dialog when the user clicks outside of it
             window.addEventListener("click", function (event) {
                 if (event.target == model) {
                     model.style.display = "none";
-                    window.location.href = "main.html";
+                    window.location.href = "dashboard.html";
                 }
             });
         }

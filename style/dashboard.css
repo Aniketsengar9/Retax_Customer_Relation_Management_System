@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900;1000&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-y: hidden;
+    font-family: "Mulish";
+}
+
+.container {
+    display: flex;
+}
+
+/* Nav bar CSS */
+#navbar {
+    position: sticky;
+    /* Make the navbar fixed */
+    left: 0;
+    top: 0;
+    width: 14%;
+    min-height: 100vh;
+    background-color: #f4f4f6;
+    overflow-y: auto;
+    /* Add vertical scroll if needed */
+}
+
+.nav-child h1 {
+    margin: 10px;
+    margin-left: 10%;
+}
+#filterbar{
+    margin: 10px;
+    margin-left: 2.5%;
+}
+#search {
+    border-radius: 5px;
+    text-decoration: none;
+    border: 1px solid #ccc;
+    padding: 8px;
+    font-size: 15px;
+    margin: 20px;
+    margin-left: 10%;
+}
+
+.link-div {
+    margin: 15px;
+    margin-left: 10%;
+}
+
+.link-div:hover .nav-icon {
+    transform: scale(1.5);
+}
+
+.nav-icon {
+    width: 15px;
+}
+
+.links {
+    color: #262626;
+    text-decoration: none;
+    font-size: 20px;
+    margin: 10px;
+    font-weight: bold;
+}
+
+.links:hover {
+    color: #722ed1;
+}
+
+.bottom-nav {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding-bottom: 20px;
+    /* Add some padding at the bottom */
+}
+
+/* left div*/
+
+.profile-span {
+    margin-top: 0.5%;
+    margin-left: 92%;
+}
+
+.notification {
+    width: 40px;
+}
+
+.profile-img {
+    width: 40px;
+    border-radius: 50%;
+    padding-left: 1%;
+
+}
+
+/* #dashboard-div h1 {
+    margin: 20px;
+    margin-left: 2%;
+} */
+
+
+#dashboard-div {
+    width: 85.8%;
+    min-height: 100vh;
+    position: fixed;
+    left: 14%;
+}
+
+#button-div {
+    /* border: 2px solid black; */
+    width: 95%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#add-Employee-emp {
+    border-color: #722ed1;
+    border: 2px solid;
+    border-radius: 10px;
+    font-size: 20px;
+    height: 40px;
+    color: #722ed1;
+    background-color: white;
+}
+
+#add-Employee-dashboard {
+    border-color: #722ed1;
+    border: 2px solid;
+    border-radius: 10px;
+    font-size: 20px;
+    height: 40px;
+    color: #722ed1;
+    background-color: white;
+}
+
+#key-indicators {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3%;
+    margin: 2%;
+}
+
+#graph-section {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+#successful-case {
+    font-weight: bold;
+    background-color: #f9f0ff;
+    padding-left: 30px;
+    text-align: start;
+    border-radius: 5px;
+}
+
+#leads {
+    font-weight: bold;
+    background-color: #fff2e8;
+    padding-left: 30px;
+    text-align: start;
+    border-radius: 5px;
+}
+
+#request {
+    font-weight: bold;
+    background-color: #f6ffed;
+    padding-left: 30px;
+    text-align: start;
+    border-radius: 5px;
+}
+
+#new-customer {
+    font-weight: bold;
+    background-color: #e6f7ff;
+    padding-left: 30px;
+    text-align: start;
+    border-radius: 5px;
+}
+
+
+
+/* Employee-Page CSS*/
+
+.active-status {
+    color: #52c41a;
+    background-color: #f6ffed;
+
+}
+
+
+
+/*#search_emp:focus {
+    outline: none;
+}*/
+
+#search_emp {
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 8px;
+    text-align: center;
+    color: black;
+    border: 1px solid #ccc;
+}
+
+
+
+select {
+    padding: 8px;
+    font-size: 16px;
+    background-color: #f4f4f6;
+    color: black;
+    border: 1px solid gray;
+    border-radius: 8px;
+}
+
+select:focus {
+    outline: none;
+}
+
+#employees-page {
+    display: none;
+}
+
+/* table td:first-child {
+    width: 50px;
+    /* Set the desired width for the first (image) column */
+/* }  */
+
+table {
+    text-align: center;
+    margin: auto;
+    width: 98%;
+    /* border-collapse: collapse; */
+}
+
+thead {
+    background-color: #f4f4f6;
+    color: black;
+}
+
+td,
+th {
+    border-bottom: 1px solid #ddd;
+}
+
+td {
+    padding: 15px;
+    margin: 0px;
+    line-height: 2;
+}
+
+tbody {
+    background-color: white;
+    color: black;
+}
+
+#pagination-wrapper {
+    display: flex;
+    margin-top: 20px;
+    column-gap: 20px;
+    justify-content: center;
+}
+
+#pagination-wrapper button:hover {
+    background-color: white;
+}
+
+#pagination-wrapper button:focus {
+    background-color: #fff;
+    color: black;
+}
+
+#pagination-wrapper button {
+    width: 40px;
+    height: 40px;
+    background-color: rgb(255, 255, 255);
+    color: white;
+    font-size: 22px;
+    border: none;
+    border-radius: 10px;
+    margin-right: 5px;
+}
+
+
+/* Form of employee */
+
+#add-Employee-form {
+    display: none;
+}

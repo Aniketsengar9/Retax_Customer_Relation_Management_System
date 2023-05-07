@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style/customer.css" />
+    <link rel="shortcut icon" href="images/Retax.jpg" type="jpeg/png">
+</head>
+
+<body>
+    <div class="container">
+        <nav id="navbar">
+            <div class="nav-child">
+                <h1 id="logo">Retax</h1>
+                <input type="text" name="search" id="search" placeholder="Search" />
+
+                <div class="link-div">
+                    <img class="nav-icon" src="images/dashboard.png" alt="pic" />
+                    <a class="links" id="dashboard" href="dashboard.html">Dashboard</a>
+                </div>
+                
+                <div class="link-div">
+                    <img class="nav-icon" src="images/task.png" alt="pic" />
+                    <a class="links" id="task" href="#">Task</a>
+                </div>
+                
+                <div class="link-div">
+                    <img class="nav-icon" src="images/calendar.png" alt="pic" />
+                    <a class="links" id="calender" href="#">Calender</a>
+                </div>
+                
+                <div id="emp-div" class="link-div">
+                    <img class="nav-icon" src="images/employees.png" alt="pic" />
+                    <a class="links" id="employees" href="employee.html">Employees</a>
+                </div>
+                
+                <div class="link-div">
+                    <img class="nav-icon" src="images/customer.png" alt="pic" />
+                    <a class="links" id="customers" href="customer.html">Customers</a>
+                </div>
+                
+                <div class="link-div">
+                    <img class="nav-icon" src="images/cases.png" alt="pic" />
+                    <a class="links" id="cases" href="#">Cases</a>
+                </div>
+                
+                <div class="link-div">
+                    <img class="nav-icon" src="images/leads.png" alt="pic" />
+                    <a class="links my-link" id="lead" href="#">Leads</a>
+                </div>
+                <!--Setting logout -->
+
+                <div class="bottom-nav">
+                    <hr class="divider">
+                    <br>
+                    <div class="link-div">
+                        <img class="nav-icon" src="images/setting.png" alt="pic" />
+                        <a class="links" id="setting" href="google.com">Settings</a>
+                    </div>
+
+                    <div class="link-div">
+                        <img class="nav-icon" src="images/help.png" alt="pic" />
+                        <a class="links" id="help" href="#">Help</a>
+                    </div>
+                    <br>
+                    <hr />
+                    <br>
+                    <div class="link-div">
+                        <img class="nav-icon" src="images/logout.png" alt="pic" />
+                        <a class="links" id="logout" href="#">Logout</a>
+                    </div>
+                    <br>
+                    <br>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Dashboard and data div-->
+
+            <!--Main content div start-->
+
+            <!-- customer page starts here -->
+            <div id="customers-page">
+                <!--Please append all Customers data here ... -->
+                <div id="button-div">
+                    <h1>Customer</h1>
+                    <button id="add-Employee-emp">Add an Customer</button>
+                </div>
+                <div id="filterbar">
+                    <input type="text" name="emp" id="search_emp" placeholder="Search by Name">
+                    <!-- Status Filter -->
+                    <select name="" id="cStatus">
+                        <option value="">Status</option>
+                        <option value="completed">Completed</option>
+                        <option value="in progress">In progress</option>
+                        <option value="to do">To do</option>
+                    </select>
+                    <!-- Family Status Filter -->
+                    <select name="" id="family">
+                        <option value="">Family Status</option>
+                        <option value="married">Married</option>
+                        <option value="Single">Single</option>
+                    </select>
+                    <!-- Age Filter -->
+                    <button id="ascAge">Age &uarr;</button>
+                    <button id="desAge">Age &darr;</button>
+                </div>
+                <br>
+                <table CELLSPACING=2>
+                    <thead>
+                        <td></td>
+                        <td>CUSTOMER NAMES</td>
+                        <td>ID</td>
+                        <td>CASE STATUS</td>
+                        <td>FAMILY STATUS</td>
+                        <td>PHONE NUMBER</td>
+                        <td>EMAIL</td>
+                        <td>AGE</td>
+                        <td>ADDRESS</td>
+                        <td></td>
+                    </thead>
+                    <tbody id="cTBody">
+                        <!-- append here all the data -->
+                    </tbody>
+                </table>
+                <div id="cPagination"></div>
+            </div>
+
+            <div id="add-Employee-form">
+                <h1>Add Employee</h1>
+                <label>Department : </label><input type="text" id="emp_dept"><br>
+                <label>Name : </label><input type="text" id="emp_name"><br>
+                <label>Email : </label><input type="email" id="emp_email"><br>
+                <label>Location : </label><input type="text" id="emp_location"><br>
+                <label>Phone : </label><input type="number" id="emp_phone"><br>
+                <label>Location : </label><input type="text" id="emp_location"><br>
+                <label>Start Date : </label><input type="date" id="emp_start_date"><br>
+                <label>Postion : </label><input type="text" id="emp_position"><br>
+                <label>Profile-Pic : </label><input type="text" id="emp_profile"><br>
+                <label>Status : </label><input type="text" id="emp_status"><br>
+                <button id="emp_submit">Submit</button>
+                <button id="emp_cancel">Cancel</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <script src="script/customer.js"></script>
+</body>
+
+</html>
+
+
+
+<div id="customers-page">
+    <!--Please append all Customers data here ... -->
+    <div id="button-div">
+        <h1>Customer</h1>
+        <button id="add-Employee-emp">Add an Customer</button>
+    </div>
+    <div id="filterbar">
+        <input type="text" name="emp" id="search_emp" placeholder="Search by Name">
+        <!-- Status Filter -->
+        <select name="" id="cStatus">
+            <option value="">Status</option>
+            <option value="completed">Completed</option>
+            <option value="in progress">In progress</option>
+            <option value="to do">To do</option>
+        </select>
+        <!-- Family Status Filter -->
+        <select name="" id="family">
+            <option value="">Family Status</option>
+            <option value="married">Married</option>
+            <option value="Single">Single</option>
+        </select>
+        <!-- Age Filter -->
+        <button id="ascAge">Age &uarr;</button>
+        <button id="desAge">Age &darr;</button>
+    </div>
+    <br>
+    <table CELLSPACING=2>
+        <thead>
+            <td></td>
+            <td>CUSTOMER NAMES</td>
+            <td>ID</td>
+            <td>CASE STATUS</td>
+            <td>FAMILY STATUS</td>
+            <td>PHONE NUMBER</td>
+            <td>EMAIL</td>
+            <td>AGE</td>
+            <td></td>
+        </thead>
+        <tbody id="cTBody">
+            <!-- append here all the data -->
+        </tbody>
+    </table>
+    <div id="cPagination">
+    </div>
+</div>
