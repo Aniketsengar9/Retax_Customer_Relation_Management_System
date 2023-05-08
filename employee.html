@@ -133,12 +133,56 @@
                 <tbody>
                     <!-- append here all the data -->
             </table>
-            <div id="pagination">
-            </div>
+            <div id="footer">
+                <div id="button-formet">
+                    <div class="delete-edit-class" id="delete-edit">
+                        <button id="edit-emp">✎ Edit</button>
+                        <button id="delete-emp">🗑 Delete</button>
+                      </div>
+                </div>
+                
+                <div id="pagination">
+                  
+                </div>
+              
+              </div>
         </div>
+
+        <div id="add-Employee-form" class="add-Employee-form-class">
+            <div class="title">
+              <h2>Add Employee</h2>
+            </div>
+            
+    
+            <div class="input-tags">
+            <input placeholder="Enter Department" type="text" id="emp_dept"><br>
+            <input placeholder="Enter Name" type="text" id="emp_name"><br>
+            <input placeholder="Enter Email" type="email" id="emp_email"><br>
+            <input placeholder="Enter Location" type="text" id="emp_location"><br>
+            <input placeholder="Enter Phone" type="number" id="emp_phone"><br>
+            <input placeholder="Enter Start Date" type="date" id="emp_start_date"><br>
+            <input placeholder="Enter Postion" type="text" id="emp_position"><br>
+            <input placeholder="Enter Profile-Pic Link" type="text" id="emp_profile"><br>
+            <select name="emp_status" id="emp_status">
+                <option value="">Select Status</option>
+                <option value="Active">Active</option>
+                <option value="In a Meeting">In a Meeting</option>
+                <option value="Out Sick">Out Sick</option>
+            </select>
+            </div>
+            <div id="form_button">
+                <button id="emp_submit">Submit</button>
+                <button id="emp_cancel">Cancel</button>
+            </div>
+            
+            
+     
+          </div>
+         <div id="overlay"></div>
 
     </div>
     <script src="script/employee.js"></script>
+    <script src="script/addEmployee.js"></script>
 </body>
 
 </html>

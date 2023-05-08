@@ -1,19 +1,18 @@
 
 // Fetch data from employee API
 let tbody = document.querySelector("tbody");
-
-let employee_url = new URL(
+/*let employee_url = new URL(
   "https://64528a67a2860c9ed40f2135.mockapi.io/employees"
-);
-
+);*/
+let delete_edit_div=document.getElementById("delete-edit");
 let currentPage = 1;
 let rowsPerPage = 5;
 let data;
 let total;
 
-// let employee_url = "https://64528a67a2860c9ed40f2135.mockapi.io/employees"
+ let employee_url = "https://64528a67a2860c9ed40f2135.mockapi.io/employees"
 
-fetchData()
+fetchData();
 
  function fetchData() {
   fetch(employee_url)
@@ -28,6 +27,8 @@ fetchData()
       display(data);
     });
 }
+let del_edit_id=null;
+let edit_data=null;
 
 // Append data in the tbody by fetch request
 
@@ -63,10 +64,21 @@ fetchData()
 
     if (paginatedData[i].status == "Active") {
       status.classList = "active-status";
+    }else if(paginatedData[i].status == "In a Meeting"){
+      status.classList = "meeting-status";
+    }
+    else if(paginatedData[i].status == "Out Sick"){
+      status.classList = "sick-status";
     }
     phNo.innerText = paginatedData[i].phone;
     email.innerText = paginatedData[i].email;
     btn.innerHTML = "...";
+    
+    btn.addEventListener("click" , ()=>{
+      edit_data=paginatedData[i];
+      del_edit_id=paginatedData[i].id;
+      delete_edit_div.classList.add("active-delete-button")
+    })
 
     tr.append(img, name, posi, dept, status, phNo, email, btn);
     tbody.append(tr);
@@ -81,7 +93,7 @@ async function paginationFunction(total) {
     let totalPages = Math.ceil(total / rowsPerPage);
     let pagination = document.querySelector("#pagination");
     pagination.innerHTML = "";
-    console.log(total);
+    console.log("JF");
 
     for (let i = 1; i <= totalPages; i++) {
       let btn = document.createElement("button");
@@ -91,6 +103,7 @@ async function paginationFunction(total) {
 
       //add event listner
       btn.addEventListener("click", () => {
+        console.log("hello")
         currentPage = i;
         fetchData();
       });
@@ -149,69 +162,90 @@ function fetchSelectData(name) {
         display(data);
       } else {
         dept_data = data.filter((item) => {
+          console.log(item.dept)
           if (item.dept.toUpperCase() == name.toUpperCase()) {
             return true;
           }
         });
+       // console.log(dept_data)
+       
         display(dept_data);
         paginationFunction(dept_data.length);
       }
     });
 }
 
-// Add Employee button
 
-let addButton = document.querySelector("#add-Employee-emp");
+// Select Status filter 
+let status_data = [];
 
-addButton.addEventListener("click", () => {
-  employee_page.style.display = "none";
-  add_emp_form.style.display = "inline";
+let estatus=document.getElementById("estatus");
 
+estatus.addEventListener("change", () => {
+  fetchStatusData(estatus.value);
 });
 
-// form submit for patch employee
+function fetchStatusData(name) {
+  fetch(employee_url)
+    .then((res) => {
+      return res.json();
+    })
+    .then((data) => {
+      console.log(name);
+      if (name == "") {
+        display(data);
+      } else {
+        status_data = data.filter((item) => {
+          if (item.status.toUpperCase() == name.toUpperCase()) {
+            return true;
+          }
+        });
+        if(status_data.length==0)
+       {
+        tbody.innerHTML="";
+        let h1=document.createElement("h1");
+        h1.innerHTML
+        =("No Record Found");
+        tbody.append(h1);
+       }
+       else{
+        display(status_data);
+       }
+        paginationFunction(status_data.length);
+      }
+    });
+}
 
-/*
 
- <label>Department : </label><input type="text" id="emp_dept"><br>
-                <label>Name : </label><input type="text" id="emp_name"><br>
-                <label>Email : </label><input type="email" id="emp_email"><br>
-                <label>Location : </label><input type="text" id="emp_location"><br>
-                <label>Phone : </label><input type="number" id="emp_phone"><br>
-                <label>Location : </label><input type="text" id="emp_location"><br>
-                <label>Start Date : </label><input type="date" id="emp_start_date"><br>
-                <label>Postion : </label><input type="text" id="emp_position"><br>
-                <label>Profile-Pic : </label><input type="text" id="emp_profile"><br>
-                <label>Status : </label><input type="text" id="emp_status"><br>
-                <input type="submit"  id="emp_submit">
-                <button id="emp_cancel">Cancel</button>
+// Select Status filter 
+let position_data = [];
 
-*/
+let empPosition=document.getElementById("postion");
 
-let emp_name = document.getElementById("emp_name");
-let emp_email = document.getElementById("emp_email");
-let emp_location = document.getElementById("emp_location");
-let emp_start_date = document.getElementById("emp_start_date");
-let emp_phone = document.getElementById("emp_phone");
-let emp_position = document.getElementById("emp_position");
-let emp_profile = document.getElementById("emp_profile");
-let emp_status=document.getElementById("emp_status");
+empPosition.addEventListener("change", () => {
+  fetchPositionData(empPosition.value);
+});
 
-let cancel = document.getElementById("emp_cancel");
-let emp_submit = document.getElementById("emp_submit");
+function fetchPositionData(name) {
+  fetch(employee_url)
+    .then((res) => {
+      return res.json();
+    })
+    .then((data) => {
+      console.log(name);
+      if (name == "") {
+        display(data);
+      } else {
+        position_data = data.filter((item) => {
+          if (item.position.toUpperCase() == name.toUpperCase()) {
+            return true;
+          }
+        });
+       // if()
+        display(position_data);
+        paginationFunction(position_data.length);
+      }
+    });
+}
 
-
-// emp_submit.addEventListener("click" ,(e) =>{
-//     let obj={
-//         dept: 
-//         email: 
-//         ename: 
-//         location: 
-//         phone: 
-//         position: 
-//         profile_pic: "https://pbs.twimg.com/media/FjU2lkcWYAgNG6d.jpg"
-//         start_date: 
-//         status: emp_status.value,
-
-//     }
-// })
+//console.log(del_edit_id)
