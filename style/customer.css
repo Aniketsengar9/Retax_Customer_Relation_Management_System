@@ -117,7 +117,7 @@ body {
     align-items: center;
 }
 
-#add-Employee-emp {
+#add-customer {
     border-color: #722ed1;
     border: 2px solid;
     border-radius: 10px;
@@ -194,11 +194,11 @@ body {
 
 
 
-/*#search_emp:focus {
+/*#search_cust:focus {
     outline: none;
 }*/
 
-#search_emp {
+#search_cust {
     padding: 8px;
     font-size: 16px;
     border-radius: 8px;
@@ -249,9 +249,8 @@ th {
 }
 
 td {
-    padding: 15px;
+    padding: 10px;
     margin: 0px;
-    line-height: 2;
 }
 
 tbody {
@@ -287,11 +286,6 @@ tbody {
 }
 
 
-/* Form of employee */
-
-#add-Employee-form {
-    display: none;
-}
 
 #customers-page {
     display: inline-block;
@@ -325,8 +319,10 @@ td {
 
 #cPagination {
     width: 10%;
+    position: fixed;
     display: flex;
-    margin: 25px auto;
+    /* margin: 25px auto; */
+    margin-left: 35%;
     justify-content: space-between;
 }
 
@@ -338,11 +334,306 @@ td {
     color: black;
     width: 30px;
     text-align: center;
+    margin-top: 3px;
     border: 1px solid black;
     /* background-color: #52c41a; */
 }
+
 #cPagination a:hover {
     color: royalblue;
     background-color: aliceblue;
     font-size: 24px;
+}
+
+
+#partnerInfo {
+    display: none;
+    /* background-color: #ccc; */
+}
+
+#close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+}
+
+/* Form of employee */
+
+#add-customer-form {
+    width: 30%;
+    /* border: 2px solid black; */
+    text-align: center;
+    display: none;
+    overflow-y: scroll;
+    position: absolute;
+    max-height: 80vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+}
+
+label {
+    margin-left: 10px;
+}
+
+input {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+input:focus {
+    outline: none;
+    border-bottom: none;
+}
+
+input,
+select {
+    margin-bottom: 10px;
+    margin-left: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+input {
+    margin-right: 5px;
+    margin-top: 10px;
+}
+
+select#caseStatus {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 5px;
+}
+
+select#caseStatus:focus {
+    outline: none;
+    border-bottom: none;
+}
+
+select#familyStatus {
+    /* width: 20%; */
+    border: none;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    /* margin-left: -2px; */
+    padding: 5px;
+}
+
+select#familyStatus:focus {
+    outline: none;
+    border-bottom: none;
+}
+
+#add-customer-form button {
+    text-align: center;
+    margin-top: 10px;
+    padding: 5px;
+    /* width: 10%; */
+    font-size: 22px;
+    border-radius: 5px;
+    border: none;
+}
+
+#add-customer-form button:hover {
+    color: royalblue;
+    background-color: aliceblue;
+    font-size: 24px;
+}
+
+#m_name {
+    margin-left: 40px;
+}
+
+#m_No {
+    margin-left: 25px;
+}
+
+#m_Email {
+    margin-left: 43px;
+}
+
+#m_Age {
+    margin-left: 53px;
+}
+
+#case_ID {
+    margin-left: 33px;
+}
+
+#_Address {
+    margin-left: 23px;
+}
+
+#case_Status {
+    margin-left: 23px;
+}
+
+#family_Status {
+    margin-left: 15px;
+}
+
+#f_pic {
+    margin-left: 50px;
+}
+
+#f_No {
+    margin-left: 0px;
+}
+
+#f_Email {
+    margin-left: 20px;
+}
+
+#f_Age {
+    margin-left: 30px;
+}
+
+#customer button {
+    font-weight: 600;
+}
+
+
+/* edit button styling */
+#edit-customer-form {
+    width: 30%;
+    border: 2px solid black;
+    text-align: center;
+    display: none;
+    overflow-y: scroll;
+    position: absolute;
+    max-height: 80vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+}
+
+#edit-customer-form #eclose-btn1 {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+#edit-customer-form button {
+    text-align: center;
+    margin-top: 10px;
+    padding: 5px;
+    /* width: 10%; */
+    font-size: 22px;
+    border-radius: 5px;
+    border: none;
+}
+
+#edit-customer-form button:hover {
+    color: royalblue;
+    background-color: aliceblue;
+    font-size: 24px;
+}
+
+/* footer css */
+#footer {
+    display: flex;
+    flex-direction: row;
+    margin: 25px auto;
+    justify-content: space-between;
+    /* border: 1px solid; */
+    width: 90%;
+}
+
+#additionalBtn {
+    display: none;
+}
+
+#additionalBtn button {
+    /* margin: 25px auto; */
+    border: none;
+    padding: 5px;
+    /* width: 10%; */
+    font-size: 22px;
+    border-radius: 5px;
+}
+
+#additionalBtn button:hover {
+    color: royalblue;
+    background-color: aliceblue;
+    font-size: 24px;
+}
+
+#deletedmodel {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#addedmodel {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* model content */
+.model-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%;
+}
+
+.model-content h1 {
+    text-align: center;
+}
+
+/* Close button */
+.close,
+.close1 {
+    background-color: #aaa;
+    float: right;
+    font-size: 28px;
+    width: auto;
+    height: auto;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close1:hover {
+    color: royalblue;
+    background-color: aliceblue;
+    font-size: 30px;
 }
