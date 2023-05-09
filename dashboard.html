@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
   <link rel="stylesheet" href="style/dashboard.css"/>
+  <link rel="stylesheet" href="style/employee.css">
   <link rel="shortcut icon" href="images/Retax.jpg" type="jpeg/png">
 </head>
 
@@ -131,26 +132,58 @@
         </div>
       </div>
 
-      <div id="add-Employee-form">
-        <h1>Add Employee</h1>
-        <label>Department : </label><input type="text" id="emp_dept"><br>
-        <label>Name : </label><input type="text" id="emp_name"><br>
-        <label>Email : </label><input type="email" id="emp_email"><br>
-        <label>Location : </label><input type="text" id="emp_location"><br>
-        <label>Phone : </label><input type="number" id="emp_phone"><br>
-        <label>Location : </label><input type="text" id="emp_location"><br>
-        <label>Start Date : </label><input type="date" id="emp_start_date"><br>
-        <label>Postion : </label><input type="text" id="emp_position"><br>
-        <label>Profile-Pic : </label><input type="text" id="emp_profile"><br>
-        <label>Status : </label><input type="text" id="emp_status"><br>
-        <button id="emp_submit">Submit</button>
-        <button id="emp_cancel">Cancel</button>
-        </form>
+      
+      <div id="add-Employee-form" class="add-Employee-form-class">
+        <div class="title">
+          <h2>Add Employee</h2>
+        </div>
+        
+
+        <div class="input-tags">
+            <select name="" id="emp_dept">
+                <option value="Sales">Sales</option>
+                <option value="Marketing">Marketing</option>
+            </select><br>
+        <input placeholder="Enter Name" type="text" id="emp_name"><br>
+        <input placeholder="Enter Email" type="email" id="emp_email"><br>
+        <input placeholder="Enter Location" type="text" id="emp_location"><br>
+        <input placeholder="Enter Phone" type="number" id="emp_phone"><br>
+        <input placeholder="Enter Start Date" type="date" id="emp_start_date"><br>
+        <select name="" id="emp_position">
+            <option value="Head Of Marketing">Head Of Marketing</option>
+            <option value="Marketing Consultant">Marketing Consultant</option>
+            <option value="Marketing Coordinator">Marketing Coordinator</option>
+            <option value="Marketing Manager">Marketing Manager</option>
+            <option value="Marketing Specialist">Marketing Specialist</option>
+            <option value="Marketing Analyst">Marketing Analyst</option>
+            <option value="Head Of Sales">Head Of Sales</option>
+            <option value="Sales Manager">Sales Manager</option>
+            <option value="Lead Generator">Lead Generator</option>
+            <option value="Sales Representative">Sales Representative</option>
+            <option value="Sales Consultant">Sales Consultant</option>
+        </select><br>
+        <input placeholder="Enter Profile-Pic Link" type="text" id="emp_profile"><br>
+        <select name="emp_status" id="emp_status">
+            <option value="">Select Status</option>
+            <option value="Active">Active</option>
+            <option value="In a Meeting">In a Meeting</option>
+            <option value="Out Sick">Out Sick</option>
+        </select>
+        </div>
+        <div id="form_button">
+            <button id="emp_submit">Submit</button>
+            <button id="emp_cancel">Cancel</button>
+        </div>
+        
+        
+ 
       </div>
+     <div id="overlay"></div>
     </div>
 
   </div>
   <script src="script/dashboard.js"></script>
+ <!-- <script src="script/addEmployee.js"></script>  -->
 </body>
 
 </html>
