@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+
+<html >
 
 <head>
     <meta charset="UTF-8" />
@@ -21,32 +21,32 @@
                     <img class="nav-icon" src="images/dashboard.png" alt="pic" />
                     <a class="links" id="dashboard" href="dashboard.html">Dashboard</a>
                 </div>
-                
+
                 <div class="link-div">
                     <img class="nav-icon" src="images/task.png" alt="pic" />
                     <a class="links" id="task" href="#">Task</a>
                 </div>
-                
+
                 <div class="link-div">
                     <img class="nav-icon" src="images/calendar.png" alt="pic" />
                     <a class="links" id="calender" href="#">Calender</a>
                 </div>
-                
+
                 <div id="emp-div" class="link-div">
                     <img class="nav-icon" src="images/employees.png" alt="pic" />
                     <a class="links" id="employees" href="employee.html">Employees</a>
                 </div>
-                
+
                 <div class="link-div">
                     <img class="nav-icon" src="images/customer.png" alt="pic" />
                     <a class="links" id="customers" href="customer.html">Customers</a>
                 </div>
-                
+
                 <div class="link-div">
                     <img class="nav-icon" src="images/cases.png" alt="pic" />
                     <a class="links" id="cases" href="#">Cases</a>
                 </div>
-                
+
                 <div class="link-div">
                     <img class="nav-icon" src="images/leads.png" alt="pic" />
                     <a class="links my-link" id="lead" href="#">Leads</a>
@@ -79,124 +79,239 @@
         </nav>
 
         <!-- Dashboard and data div-->
-
-            <!--Main content div start-->
-
-            <!-- customer page starts here -->
-            <div id="customers-page">
-                <!--Please append all Customers data here ... -->
-                <div id="button-div">
-                    <h1>Customer</h1>
-                    <button id="add-Employee-emp">Add an Customer</button>
+        <!--Main content div start-->
+        <!-- customer page starts here -->
+        <div id="customers-page">
+            <!--Please append all Customers data here ... -->
+            <div id="button-div">
+                <h1>Customer</h1>
+                <button id="add-customer">Add an Customer</button>
+            </div>
+            <div id="filterbar">
+                <input type="text" name="emp" id="search_cust" placeholder="Search by Name">
+                <!-- Status Filter -->
+                <select name="" id="cStatus">
+                    <option value="">Status</option>
+                    <option value="Completed">Completed</option>
+                    <option value="In progress">In progress</option>
+                    <option value="To do">To do</option>
+                </select>
+                <!-- Family Status Filter -->
+                <select name="" id="family">
+                    <option value="">Family Status</option>
+                    <option value="Married">Married</option>
+                    <option value="Single">Single</option>
+                </select>
+                <!-- Age Filter -->
+                <button id="ascAge">Age &uarr;</button>
+                <button id="desAge">Age &darr;</button>
+            </div>
+            <br>
+            <table CELLSPACING=2>
+                <thead>
+                    <td></td>
+                    <td>CUSTOMER NAMES</td>
+                    <td>ID</td>
+                    <td>CASE STATUS</td>
+                    <td>FAMILY STATUS</td>
+                    <td>PHONE NUMBER</td>
+                    <td>EMAIL</td>
+                    <td>AGE</td>
+                    <td>ADDRESS</td>
+                    <td></td>
+                </thead>
+                <tbody id="cTBody">
+                    <!-- append here all the data -->
+                </tbody>
+            </table>
+            <div id="footer">
+                <div id = "additionalBtn">
+                    <button id="edit">Edit</button>
+                    <button id="delete">Delete</button>
                 </div>
-                <div id="filterbar">
-                    <input type="text" name="emp" id="search_emp" placeholder="Search by Name">
-                    <!-- Status Filter -->
-                    <select name="" id="cStatus">
-                        <option value="">Status</option>
-                        <option value="completed">Completed</option>
-                        <option value="in progress">In progress</option>
-                        <option value="to do">To do</option>
-                    </select>
-                    <!-- Family Status Filter -->
-                    <select name="" id="family">
-                        <option value="">Family Status</option>
-                        <option value="married">Married</option>
-                        <option value="Single">Single</option>
-                    </select>
-                    <!-- Age Filter -->
-                    <button id="ascAge">Age &uarr;</button>
-                    <button id="desAge">Age &darr;</button>
-                </div>
-                <br>
-                <table CELLSPACING=2>
-                    <thead>
-                        <td></td>
-                        <td>CUSTOMER NAMES</td>
-                        <td>ID</td>
-                        <td>CASE STATUS</td>
-                        <td>FAMILY STATUS</td>
-                        <td>PHONE NUMBER</td>
-                        <td>EMAIL</td>
-                        <td>AGE</td>
-                        <td>ADDRESS</td>
-                        <td></td>
-                    </thead>
-                    <tbody id="cTBody">
-                        <!-- append here all the data -->
-                    </tbody>
-                </table>
                 <div id="cPagination"></div>
             </div>
-
-            <div id="add-Employee-form">
-                <h1>Add Employee</h1>
-                <label>Department : </label><input type="text" id="emp_dept"><br>
-                <label>Name : </label><input type="text" id="emp_name"><br>
-                <label>Email : </label><input type="email" id="emp_email"><br>
-                <label>Location : </label><input type="text" id="emp_location"><br>
-                <label>Phone : </label><input type="number" id="emp_phone"><br>
-                <label>Location : </label><input type="text" id="emp_location"><br>
-                <label>Start Date : </label><input type="date" id="emp_start_date"><br>
-                <label>Postion : </label><input type="text" id="emp_position"><br>
-                <label>Profile-Pic : </label><input type="text" id="emp_profile"><br>
-                <label>Status : </label><input type="text" id="emp_status"><br>
-                <button id="emp_submit">Submit</button>
-                <button id="emp_cancel">Cancel</button>
-                </form>
-            </div>
         </div>
+        <!-- customer addition form -->
+        <div id="add-customer-form">
+            <h1>Add Customer Details</h1>
+            <form id="customer">
+                <button id="close-btn">X</button>
 
+                <label>Profile Pic : </label>
+                <input type="text" id="m_pic" value="https://pbs.twimg.com/media/FjU2lkcWYAgNG6d.jpg">
+                <br>
+
+                <label>Name : </label>
+                <input type="text" id="m_name" placeholder="Enter Name" required>
+                <br>
+
+                <label>Number : </label>
+                <input type="text" id="m_No" placeholder="Enter Number" required>
+                <br>
+
+                <label>Email : </label>
+                <input type="email" id="m_Email" placeholder="Enter Email" required>
+                <br>
+
+                <label>Age : </label>
+                <input type="number" id="m_Age" placeholder="Enter Age" required>
+                <br>
+
+                <label>CaseID : </label>
+                <input type="text" id="case_ID" placeholder="Enter CaseID" required>
+                <br>
+
+                <label>Address : </label>
+                <input type="text" id="_Address" placeholder="Enter Address" required>
+                <br>
+
+                <label>Case Status : </label>
+                <select name="status" id="case_Status" required>
+                    <option value="">Choose Status</option>
+                    <option value="Completed">Completed</option>
+                    <option value="In progress">In progress</option>
+                    <option value="To do">To do</option>
+                </select>
+                <br>
+
+                <label>Family Status : </label>
+                <select name="familystatus" id="family_Status" required >
+                    <option value="">Choose Status</option>
+                    <option value="Married">Married</option>
+                    <option value="Single">Single</option>
+                </select>
+                <br>
+                <!-- partner info div -->
+                <div id="partnerInfo">
+                    <h3>Add Partner Details</h3>
+                    <label>Profile Pic : </label>
+                    <input type="text" id="f_pic"
+                        value="https://encrypted-tbn0.gstatic.com/imDOBs?q=tbn:ANd9GcRblRXlVkR-RDG9pYSEbJsaEY4i2F3ACD3byg&usqp=CAU">
+                    <br>
+
+                    <label>Partner's Name : </label>
+                    <input type="text" id="f_name" placeholder="Enter Partners's Name">
+                    <br>
+
+                    <label>Partner's Number : </label>
+                    <input type="text" id="f_No" placeholder="Enter Partners's Number">
+                    <br>
+                    
+                    <label>Partner's Email : </label>
+                    <input type="email" id="f_Email" placeholder="Enter Partners's Email">
+                    <br>
+                    
+                    <label>Partner's Age : </label>
+                    <input type="number" id="f_Age" placeholder="Enter Partners's Age">
+                    <br>
+                </div>
+                <!-- form buttons -->
+                <button id="cust_submit">Submit</button>
+                <button id="cust_cancel">Cancel</button>
+            </form>
+        </div>
+        <!-- customer details edit form -->
+        <div id="edit-customer-form">
+            <h1 >Edit Customer Details</h1>
+            <form id="ecustomer">
+                <button id="eclose-btn1">X</button>
+                
+                <label>Profile Pic : </label>
+                <input type="text" id="em_pic" value="https://pbs.twimg.com/media/FjU2lkcWYAgNG6d.jpg">
+                <br>
+                
+                <label>Partner's Profile Pic : </label>
+                <input type="text" id="ef_pic"
+                value="https://encrypted-tbn0.gstatic.com/imDOBs?q=tbn:ANd9GcRblRXlVkR-RDG9pYSEbJsaEY4i2F3ACD3byg&usqp=CAU">
+                <br>
+                
+                <label>Name : </label>
+                <input type="text" id="em_name" name="em_name" placeholder="Enter Name" >
+
+                <br>
+                
+                <label>Partner's Name : </label>
+                <input type="text" id="ef_name" placeholder="Enter Partners's Name">
+                <br>
+                
+                <label>CaseID : </label>
+                <input type="text" id="ecase_ID" placeholder="Enter CaseID" >
+                <br>
+                
+                <label>Case Status : </label>
+                <select name="status" id="ecase_Status" >
+                    <option value="">Choose Status</option>
+                    <option value="Completed">Completed</option>
+                    <option value="In progress">In progress</option>
+                    <option value="To do">To do</option>
+                </select>
+                <br>
+                
+                <label>Family Status : </label>
+                <select name="familystatus" id="efamily_Status"  >
+                    <option value="">Choose Status</option>
+                    <option value="Married">Married</option>
+                    <option value="Single">Single</option>
+                </select>
+                <br>
+
+                <label>Number : </label>
+                <input type="text" id="em_No" placeholder="Enter Number">
+                <br>
+
+                <label>Partner's Number : </label>
+                <input type="text" id="ef_No" placeholder="Enter Partners's Number">
+                <br>
+
+                <label>Email : </label>
+                <input type="email" id="em_Email" placeholder="Enter Email" >
+                <br>
+                
+                <label>Partner's Email : </label>
+                <input type="email" id="ef_Email" placeholder="Enter Partners's Email">
+                <br>
+
+                <label>Age : </label>
+                <input type="number" id="em_Age" placeholder="Enter Age" >
+                <br>
+
+                <label>Partner's Age : </label>
+                <input type="number" id="ef_Age" placeholder="Enter Partners's Age">
+                <br>
+
+                <label>Address : </label>
+                <input type="text" id="e_Address" placeholder="Enter Address" >
+                <br>
+
+                <button id="edit_submit">Submit</button>
+                <button id="edit_cancel">Cancel</button>
+            </form>
+        </div>
     </div>
-    <script src="script/customer.js"></script>
+    <!-- deletion popup -->
+    <div id="deletedmodel">
+        <div class="model-content">
+            <span class="close">&times;</span>
+            <h1>Deleted Successfully</h1>
+        </div>
+    </div>
+    <!-- Successfully added -->
+    <div id="addedmodel" >
+        <div class="model-content">
+            <span class="close1">&times;</span>
+            <h1>Data Added Successfully</h1>
+        </div>
+    </div>
+    <!-- updated Successfully -->
+    <div id="updatedmodel" class="model">
+        <div class="model-content">
+            <span class="close">&times;</span>
+            <h1>Deleted Successfully</h1>
+        </div>
+    </div>
+    </div>
 </body>
 
+<script src="script/customer.js"></script>
 </html>
-
-
-
-<div id="customers-page">
-    <!--Please append all Customers data here ... -->
-    <div id="button-div">
-        <h1>Customer</h1>
-        <button id="add-Employee-emp">Add an Customer</button>
-    </div>
-    <div id="filterbar">
-        <input type="text" name="emp" id="search_emp" placeholder="Search by Name">
-        <!-- Status Filter -->
-        <select name="" id="cStatus">
-            <option value="">Status</option>
-            <option value="completed">Completed</option>
-            <option value="in progress">In progress</option>
-            <option value="to do">To do</option>
-        </select>
-        <!-- Family Status Filter -->
-        <select name="" id="family">
-            <option value="">Family Status</option>
-            <option value="married">Married</option>
-            <option value="Single">Single</option>
-        </select>
-        <!-- Age Filter -->
-        <button id="ascAge">Age &uarr;</button>
-        <button id="desAge">Age &darr;</button>
-    </div>
-    <br>
-    <table CELLSPACING=2>
-        <thead>
-            <td></td>
-            <td>CUSTOMER NAMES</td>
-            <td>ID</td>
-            <td>CASE STATUS</td>
-            <td>FAMILY STATUS</td>
-            <td>PHONE NUMBER</td>
-            <td>EMAIL</td>
-            <td>AGE</td>
-            <td></td>
-        </thead>
-        <tbody id="cTBody">
-            <!-- append here all the data -->
-        </tbody>
-    </table>
-    <div id="cPagination">
-    </div>
-</div>

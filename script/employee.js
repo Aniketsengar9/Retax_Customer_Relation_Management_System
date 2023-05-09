@@ -200,7 +200,10 @@ let emp_status=document.getElementById("emp_status");
 let cancel = document.getElementById("emp_cancel");
 let emp_submit = document.getElementById("emp_submit");
 
-
+let logout = document.querySelector("#logout");
+logout.addEventListener("click", function () {
+  window.location.href = "index.html";
+})
 // emp_submit.addEventListener("click" ,(e) =>{
 //     let obj={
 //         dept: 
