@@ -185,6 +185,7 @@ estatus.addEventListener("change", () => {
   fetchStatusData(estatus.value);
 });
 
+
 function fetchStatusData(name) {
   fetch(employee_url)
     .then((res) => {
@@ -249,3 +250,54 @@ function fetchPositionData(name) {
 }
 
 //console.log(del_edit_id)
+=======
+// form submit for patch employee
+
+/*
+
+ <label>Department : </label><input type="text" id="emp_dept"><br>
+                <label>Name : </label><input type="text" id="emp_name"><br>
+                <label>Email : </label><input type="email" id="emp_email"><br>
+                <label>Location : </label><input type="text" id="emp_location"><br>
+                <label>Phone : </label><input type="number" id="emp_phone"><br>
+                <label>Location : </label><input type="text" id="emp_location"><br>
+                <label>Start Date : </label><input type="date" id="emp_start_date"><br>
+                <label>Postion : </label><input type="text" id="emp_position"><br>
+                <label>Profile-Pic : </label><input type="text" id="emp_profile"><br>
+                <label>Status : </label><input type="text" id="emp_status"><br>
+                <input type="submit"  id="emp_submit">
+                <button id="emp_cancel">Cancel</button>
+
+*/
+
+let emp_name = document.getElementById("emp_name");
+let emp_email = document.getElementById("emp_email");
+let emp_location = document.getElementById("emp_location");
+let emp_start_date = document.getElementById("emp_start_date");
+let emp_phone = document.getElementById("emp_phone");
+let emp_position = document.getElementById("emp_position");
+let emp_profile = document.getElementById("emp_profile");
+let emp_status=document.getElementById("emp_status");
+
+let cancel = document.getElementById("emp_cancel");
+let emp_submit = document.getElementById("emp_submit");
+
+let logout = document.querySelector("#logout");
+logout.addEventListener("click", function () {
+  window.location.href = "index.html";
+})
+// emp_submit.addEventListener("click" ,(e) =>{
+//     let obj={
+//         dept: 
+//         email: 
+//         ename: 
+//         location: 
+//         phone: 
+//         position: 
+//         profile_pic: "https://pbs.twimg.com/media/FjU2lkcWYAgNG6d.jpg"
+//         start_date: 
+//         status: emp_status.value,
+
+//     }
+// })
+
