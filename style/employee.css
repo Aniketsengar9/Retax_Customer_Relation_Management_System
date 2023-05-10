@@ -127,6 +127,14 @@ body {
     color: #52c41a;
     background-color: #f6ffed;
 }
+.sick-status{
+    color: #ffbb96;
+    background-color: #fff2e8;
+}
+.meeting-status{
+    color: #1890ff;
+    background-color: #e6f7ff;
+}
 
 /*#search_emp:focus {
     outline: none;
@@ -138,6 +146,8 @@ body {
     border-radius: 8px;
     text-align: center;
     color: black;
+    line-height: 1;
+    width: max-content;
     border: 1px solid #ccc;
 }
 
@@ -226,29 +236,7 @@ tbody {
     margin-right: 5px;
 } */
 
-#pagination {
-    width: 10%;
-    display: flex;
-    margin: 25px auto;
-    justify-content: space-between;
-}
 
-#pagination button {
-    font-size: 22px;
-    border-radius: 10px;
-    text-decoration: none;
-    color: black;
-    width: 30px;
-    text-align: center;
-    border: 1px solid black;
-    /* background-color: #52c41a; */
-}
-
-#pagination button:hover {
-    color: royalblue;
-    background-color: aliceblue;
-    font-size: 24px;
-}
 
 #filterbar {
     margin: 10px;
@@ -258,5 +246,174 @@ tbody {
 /* Form of employee */
 
 #add-Employee-form {
-    display: none;
+    font-size: 40px;
+    padding: 30px;
+    border: 3px solid black;
+   display: none;
+
+}
+
+.add-Employee-form-class {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    transition: 200ms ease-in-out;
+    border: 10px solid dodgerblue;
+    border-radius: 20px;
+    z-index: 10;
+    background-color: white;
+    width: 900px;
+    opacity: 0;
+    max-width: 80%;
+  
+  }
+  .add-Employee-form-class.active {
+    opacity: 1;
+    transform: translate(-50, -50) scale(1);
+    transition: transform 300ms cubic-bezier(0.18,0.89,0.43,1.19);
+  }
+  .title {
+    text-align: center;
+    margin-top: -20px;
+  }
+.input-tags{
+    margin: 5%;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+  input{
+    font-size: 2.5rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    width: 100%;
+   line-height: 1.5;
+    font-weight: bold;
+    border: 3px solid dodgerblue;
+    background-color: rgb(255, 255, 255);
+  
+ }
+ #emp_status ,#emp_dept,#emp_position{
+    font-size: 35px;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    width: 101%;
+    font-weight: bold;
+    border: 3px solid dodgerblue;
+    background-color: rgb(255, 255, 255);
+    line-height: 1;
+ }
+#emp_submit{ 
+    font-size: 3rem;
+    font-weight: bold;
+        background-color:dodgerblue; 
+        color: white; 
+        border-radius: 10px;
+        padding: 1rem;
+  }
+  #emp_submit:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid dodgerblue;
+  }
+  #emp_cancel{ 
+    font-size: 3rem;
+    font-weight: bold;
+        background-color: dodgerblue; 
+        color: white; 
+        border-radius: 10px;
+        padding: 1rem;
+        
+        
+  }
+  #emp_cancel:hover {
+    background-color : white;
+    color: black;
+    border: 2px solid dodgerblue;
+   
+  }
+#form_button{
+    display: flex;
+    justify-content: center;
+    gap: 2%;
+}
+  #overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0,0, .5);
+    pointer-events: none;
+  }
+  
+  #overlay.active {
+    opacity: 1;
+    pointer-events: all;
+    display: block;
+  }
+  
+  #emp_cancel{
+    transition: all 300ms ease-in-out;
+  }
+
+
+
+  /*Edit share button*/
+
+  #footer{
+    width: 80%;
+    display: flex;
+    margin-top: 1rem;
+    position: fixed;
+    align-items: center;
+    justify-content: start;
+}
+
+#pagination {
+    margin: 25px;
+    width: 15%;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+}
+
+#pagination button {
+    font-size: 22px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: black;
+    width: 30px;
+    text-align: center;
+    border: 3px solid black;
+    /* background-color: #52c41a; */
+}
+#pagination button:hover {
+    color: white;
+    background-color: royalblue;
+    
+}
+#button-formet{
+    width: 43%;
+}
+.delete-edit-class{
+  
+   margin-left: 15px;
+   display: none;
+   
+}
+.active-delete-button{
+    display: inline;
+}
+#edit-emp , #delete-emp{
+    background-color: white;
+    color: dodgerblue;
+    font-size: 1.3rem;
+    padding: 5px;
+    border: 2px solid dodgerblue;
+    border-radius: 10px;
 }

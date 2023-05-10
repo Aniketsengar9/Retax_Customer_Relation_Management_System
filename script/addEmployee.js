@@ -152,10 +152,4 @@ edit_btn.addEventListener("click", () => {
     // deleteDataFunction(edit_data.id);
 
 });
-/*
-let emp_name = document.getElementById("emp_name");
-let emp_dept = document.getElementById("emp_dept");
-let emp_em
-let emp_profile = document.getElementById("emp_profile");
-let emp_status = document.getElementById("emp_status");
-*/
+
