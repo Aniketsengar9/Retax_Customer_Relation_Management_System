@@ -177,3 +177,39 @@ button :hover {
     text-decoration: none;
     cursor: pointer;
 }
+
+/* Media Queries */
+ @media screen and (max-width: 768px) {
+    .main {
+        width: 90%;
+    }
+
+    input,
+    button {
+        width: 80%;
+    }
+
+    img {
+        margin-left: 45%;
+    }
+} 
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    .main {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .login {
+        transform: translateY(0);
+        border-radius: 10px;
+    }
+
+    .login label {
+        font-size: 1.8em;
+    }
+} 
