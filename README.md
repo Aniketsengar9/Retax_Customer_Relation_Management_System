@@ -1,4 +1,7 @@
 # inconclusive-meal-3122
+
+![Retax Logo](https://cdn.discordapp.com/attachments/1128079625818480751/1128800110176899172/Retax_1.jpg)
+
 A CRM system, also known as a Customer Relationship Management system, is a software tool that assists businesses in managing and improving customer relationships and interactions.
 Welcome to Retax A CRM system, also known as a Customer Relationship Management system, is a software tool that assists businesses in managing and improving customer relationships and interactions. This is a collaborative Project from Masai School in the Construct Week With the 2 team members within 5 Days. Deployed URL 👉 https://jocular-mooncake-2f4da0.netlify.app/
 
